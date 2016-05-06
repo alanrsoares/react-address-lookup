@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/alanrsoares/react-address-lookup/issues"
   },
-  "homepage": "https://github.com/alanrsoares/react-address-lookup#readme"
+  "homepage": "https://github.com/alanrsoares/react-address-lookup#readme",
+  "devDependencies": {
+    "react-fatigue-dev": "github:tj/react-fatigue-dev"
+  }
 }
