@@ -83,3 +83,5 @@ export default class AddressLookup extends Component {
     )
   }
 }
+
+Object.assign(AddressLookup, { propTypes, defaultProps })
