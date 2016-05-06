@@ -33,7 +33,6 @@ class App extends Component {
   }
 
   onAddressChange (location) {
-    console.log(location)
     this.setState({ location })
   }
 
