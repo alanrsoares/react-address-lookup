@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 
 import AddressLookup from '../index'
 
-
 const LocationItem = ({ locationKey, value }) => (
   <div className="location-item">
     <span className="location-key">{locationKey}</span>
@@ -27,7 +26,8 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      location: {}
+      location: {},
+      value: '125 St Georges Bay Rd'
     }
     this.onAddressChange = this.onAddressChange.bind(this)
   }
@@ -41,8 +41,9 @@ class App extends Component {
       <div className="lookup-container">
         <AddressLookup
           className="lookup"
+          placeholder="Enter a location"
           onChange={this.onAddressChange}
-          placeholder="Enter a location"/>
+          value={this.state.value} />
         <Location location={this.state.location} />
       </div>
     )

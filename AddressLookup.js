@@ -66,6 +66,7 @@ export default class AddressLookup extends Component {
       [camelize(type(component))]: camelizeKeys(component)
     })
     const result = place.address_components.reduce(reducer, {})
+    this.setState({ value: place.formatted_address })
     this.props.onChange(result)
   }
 
