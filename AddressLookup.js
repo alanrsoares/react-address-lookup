@@ -61,12 +61,10 @@ export default class AddressLookup extends Component {
   onPlaceChange () {
     const place = this.autocomplete.getPlace()
     const type = ({ types }) => types[0]
-    const reducer = (acc, component, i) => {
-      return {
-        ...acc,
-        [camelize(type(component))]: camelizeKeys(component)
-      }
-    }
+    const reducer = (acc, component, i) => ({
+      ...acc,
+      [camelize(type(component))]: camelizeKeys(component)
+    })
     const result = place.address_components.reduce(reducer, {})
     this.props.onChange(result)
   }
