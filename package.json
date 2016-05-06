@@ -27,5 +27,10 @@
   "homepage": "https://github.com/alanrsoares/react-address-lookup#readme",
   "devDependencies": {
     "react-fatigue-dev": "github:tj/react-fatigue-dev"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   }
 }
