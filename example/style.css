@@ -23,6 +23,6 @@
 }
 
 /* hide powered by Google */
-.pac-logo.hdpi::after {
+.pac-logo:after {
   display: none;
 }
