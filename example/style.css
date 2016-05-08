@@ -3,10 +3,14 @@
   margin: 15px auto;
 }
 
-.lookup {
+.lookup-field {
   width: 100%;
   padding: 15px 10px;
   font-size: 16px;
+}
+
+.location-container {
+  margin: 10px;
 }
 
 .location-item {

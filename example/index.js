@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom'
 
 import AddressLookup from '../index'
 
+const splitCapitals = s => s.replace(/\w/g, x => x === x.toUpperCase() ? ` ${x.toLowerCase()}` : x)
+
 const LocationItem = ({ locationKey, value }) => (
   <div className="location-item">
-    <span className="location-key">{locationKey}</span>
+    <span className="location-key">
+      { splitCapitals(locationKey) }
+    </span>
     <span className="location-value">
-    { value.shortName }
+      { value.shortName }
     </span>
   </div>
 )
@@ -40,7 +44,7 @@ class App extends Component {
     return (
       <div className="lookup-container">
         <AddressLookup
-          className="lookup"
+          className="lookup-field"
           placeholder="Enter a location"
           onChange={this.onAddressChange}
           value={this.state.value} />
