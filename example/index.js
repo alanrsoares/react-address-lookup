@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-import AddressLookup from '../index'
+import AddressLookup from '../AddressLookup'
 
 const splitCapitals = s => s.replace(/\w/g, x => x === x.toUpperCase() ? ` ${x.toLowerCase()}` : x)
 
