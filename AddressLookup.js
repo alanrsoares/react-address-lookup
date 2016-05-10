@@ -7,10 +7,12 @@ const propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  types: PropTypes.array
 }
 
 const defaultProps = {
-  onChange: () => {}
+  onChange: () => {},
+  types: ['address']
 }
 
 export default class AddressLookup extends Component {
@@ -31,7 +33,7 @@ export default class AddressLookup extends Component {
   componentDidMount () {
     this.autocomplete = new google.maps.places.Autocomplete(
       this.refs.input, {
-        types: ['address']
+        types: this.props.types
       }
     )
     this.autocomplete.addListener('place_changed', this.onPlaceChange)
